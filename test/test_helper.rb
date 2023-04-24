@@ -1,5 +1,6 @@
 require 'rubygems'
-require 'test/unit'
+require 'minitest/autorun'
+require 'mocha/minitest'
 require 'active_support'
 require 'active_support/core_ext'
 require 'action_view'

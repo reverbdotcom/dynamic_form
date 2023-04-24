@@ -10,15 +10,6 @@ module ActionView
     # is a great way of making the record quickly available for editing, but likely to prove lackluster for a complicated real-world form.
     # In that case, it's better to use the +input+ method and the specialized +form+ methods in link:classes/ActionView/Helpers/FormHelper.html
     module DynamicForm
-      # Returns a default input tag for the type of object returned by the method. For example, if <tt>@post</tt>
-      # has an attribute +title+ mapped to a +VARCHAR+ column that holds "Hello World":
-      #
-      #   input("post", "title")
-      #   # => <input id="post_title" name="post[title]" size="30" type="text" value="Hello World" />
-      def input(record_name, method, options = {})
-        InstanceTag.new(record_name, method, self).to_tag(options)
-      end
-
       # Returns an entire form with all needed input tags for a specified Active Record object. For example, if <tt>@post</tt>
       # has attributes named +title+ of type +VARCHAR+ and +body+ of type +TEXT+ then
       #
@@ -285,10 +276,6 @@ module ActionView
           @template.error_messages_for(@object_name, objectify_options(options))
         end
       end
-    end
-
-    class InstanceTag
-      include DynamicForm::InstanceTagMethods
     end
 
     class FormBuilder

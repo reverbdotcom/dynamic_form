@@ -1,7 +1,8 @@
 require 'test_helper'
 
-class DynamicFormI18nTest < Test::Unit::TestCase
+class DynamicFormI18nTest < Minitest::Test
   include ActionView::Context
+  include ActionView::Helpers
   include ActionView::Helpers::DynamicForm
 
   attr_reader :request
