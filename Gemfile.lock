@@ -247,7 +247,7 @@ DEPENDENCIES
   jeweler (= 2.3.9)
   minitest (~> 5.18)
   mocha (~> 2.0)
-  rails (= 8.0.5.2)
+  rails (> 3.0.0)
 
 CHECKSUMS
   actioncable (8.0.5.2) sha256=6841f8f3e2e605b8ac95369cbcd5a323ebc4b399e65b60fba309ec6e16b22b76
