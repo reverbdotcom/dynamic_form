@@ -1,6 +1,6 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
-gem 'rails', '> 6.0.0'
+gem 'rails', '> 3.0.0' # Gemfile.lock pins the version tested against
 
 group :development do
   gem 'jeweler', '2.3.9'
