@@ -1,6 +1,6 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
-gem 'rails', '> 6.0.0'
+gem 'rails', '8.0.5.2'
 
 group :development do
   gem 'jeweler', '2.3.9'

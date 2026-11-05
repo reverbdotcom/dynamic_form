@@ -212,7 +212,7 @@ module ActionView
 
             message = options.include?(:message) ? options[:message] : locale.t(:body)
 
-            error_messages = objects.sum do |object|
+            error_messages = objects.flat_map do |object|
               object.errors.full_messages.map do |msg|
                 content_tag(:li, msg)
               end
